@@ -1,0 +1,173 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.sideBarItem {
+	max-height: 50px;
+	max-width: 50px;
+	padding: 5px;
+}
+
+.sideBarItem img {
+	max-height: 50px;
+	max-Width: 50px;
+}
+
+.colourPalette {
+	grid-area: colourP;
+	display: flex;
+	flex-direction: grid;
+	flex-flow: wrap;
+}
+
+.options {
+	grid-area: options;
+}
+
+/* Not used as I use a html colour palette
+.colourSwatches {
+	box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+	max-height: 30px;
+	max-width: 30px;
+	margin: 5px;
+} */
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 75px 230px minmax(500px, 1fr);
+	grid-template-rows: 40px minmax(500px, 1fr) 160px;
+	grid-template-areas: "header header header" "sidebar content content" "sidebar colourP options";
+	background-color: #fff;
+	color: #333;
+}
+
+.box {
+	background-color: #333;
+	color: #fff;
+	font-size: 150%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+	background-color: #333;
+}
+
+#sizeControl {
+	width: 190px;
+	padding: 5px;
+	border: 1px solid #fff;
+	font-size: small;
+	color: #fff;
+	background-color: #333;
+	position: absolute;
+	bottom: 10px;
+}
+
+.lineWeightControl {
+	width: 190px;
+	border: 1px solid #fff;
+	padding: 5px;
+	font-size: small;
+	background-color: #333;
+	color: #fff;
+	position: absolute;
+	bottom: 70px;
+}
+
+.inputWidth {
+	/* controls length of the line width input field */
+	width: 50px;
+}
+
+/* positioning and size of the entire coulour box */
+.colourWheel {
+	border: none;
+	background-color: #333;
+	position: absolute;
+	bottom: 50px;
+}
+
+/* colour box title */
+.colourWheel p {
+	font-size: 13px;
+	border: 0px;
+}
+
+/* sizing of actual colour field */
+#colourWheel {
+	width: 60px;
+	height: 60px;
+	padding: 0px;
+}
+
+/* for 'clear' and 'save' button */
+.btn {
+	background-color: #333;
+	color: #f1f1f1;
+	padding: 5px 10px;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px;
+}
+
+.btn:hover {
+	background-color: #f1f1f1;
+	color: black;
+}
+
+/* Odd behaviour: adding a class to this button causes errors, had to use ID instead */
+
+#directionButton {
+	background-color: #333;
+	color: #f1f1f1;
+	padding: 3px 10px;
+	;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px;
+	position: absolute;
+	left: 1200;
+}
+
+#directionButton:hover {
+	background-color: #f1f1f1;
+	color: black;
+}
+
+#finishButton {
+	position: absolute;
+	bottom: 20px;
+	left: 300px;
+	background: white;
+	color: "green";
+	grid-area: options;
+}
+
+#editButton {
+	position: absolute;
+	bottom: 20px;
+	left: 500px;
+	background: white;
+	color: "red";
+	grid-area: options;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+        <!-- used for bucket fill tool -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="helperFunctions.js"></script>
+
+    <script src="freehandTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="stampTool.js"></script>
+    <script src="confettiTool.js"></script>
+    <script src="rainbowBrushTool.js"></script>
+    <script src="shapeTool.js"></script>
+    <script src="editableShapeTool.js"></script>
+    <script src="bucketFillTool.js"></script>
+   
+    
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+      <div class="box header">My Drawing App
+
+        <button id="clearButton" class="btn">Clear</button>
+        <button id="saveImageButton" class="btn">Save Image</button>
+      </div>
+      <div class="box" id="sidebar"></div>
+      <div id="content"></div>
+      <div class="box colourPalette">
+        <div class="colourWheel">
+          <p>Select a colour:</p>
+          <input type="color" id="colourWheel" name="favcolor" value="#ff0000">
+        </div>
+
+
+      </div>
+      <div class="box options">
+      
+        <div id="sizeControl">Stamp &amp; Brush Size:</div>
+        <br>
+       
+       <div class="lineWeightControl">
+        <label>Line Thickness:</label>
+        <!-- restrict line width to range only between 1 and 130 -->
+        <input type="number" name="quantity" min="1" max="130" placeholder="1 - 130" id="lineWidth" class="inputWidth" value="1">
+      </div>
+
+
+
+ 
+
+      
+
+
+    
+      
+  </div>
+  
+
+    
+
+  </body>
+</html>
